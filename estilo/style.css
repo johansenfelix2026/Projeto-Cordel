@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Roboto", sans-serif;
+    /* para titulo*/
+    --fonte3: "Sriracha", cursive;
+    /* para conteudo*/
+    --fonte4: "Archivo Black", sans-serif;
+    /* para titulo*/
+
+    /* O clamp funciona assim: clamp(TAMANHO_MÍNIMO, TAMANHO_FLUIDO, TAMANHO_MÁXIMO) */
+
+
+    --tamanho-texto: clamp(1rem, 3vw, 1.25rem);
+    /* ~16px a 18px */
+    --tamanho-subtitulo: clamp(1.25rem, 4vw, 1.75rem);
+    /* ~20px a 28px */
+    --tamanho-titulo: clamp(1.75rem, 6vw, 3rem);
+    /* ~28px a 48px */
+   }
+
+
+* {
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+html,
+body {
+    font-family: var(--fonte1);
+    min-height: 100vh;
+    background-color: rgb(214, 214, 214);
+}
+
+header {
+
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header>h1 {
+
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte4);
+    font-size: var(--tamanho-titulo);
+
+
+
+}
+
+header>p {
+
+    padding-bottom: 50px;
+
+}
+
+header a,
+footer a {
+
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+header a:hover,
+footer a:hover {
+
+    text-decoration: underline;
+}
+
+a {
+
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+
+
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2rem;
+    padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: var(--tamanho-texto);
+
+}
+
+section p {
+
+    padding-bottom: 2rem;
+}
+
+
+
+section.normal {
+    background-color: aliceblue;
+    color: black;
+}
+
+section.imagem {
+
+    background-color: rgb(105, 105, 105);
+    color: aliceblue;
+    box-shadow: inset 1px 1px 15px 0px rgba(0, 0, 0, 0.397);
+      background-size: cover;
+      background-attachment: fixed;
+}
+
+section.imagem>p {
+    display: inline-block;
+    
+
+    background-color: rgba(44, 43, 43, 0.288);
+    text-shadow: 1px 1px 0px black;
+
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+  
+
+
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
+    background-position: right center;
+  
+
+}
+
+footer {
+   font-family: var(--fonte2);
+   font-size: var(--tamanho-texto);
+
+    background-color: black;
+    text-align: center;
+    color: aliceblue;
+    padding: 10px;
+}
